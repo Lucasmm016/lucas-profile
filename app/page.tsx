@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Github from '@/components/icons/Github'
 import Linkedin from '@/components/icons/Linkedin'
@@ -131,6 +132,8 @@ export default function Home() {
 					</section>
 				</div>
 			</main>
+
+			<Footer />
 		</div>
 	)
 }
