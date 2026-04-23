@@ -14,7 +14,7 @@ export function Container({ title, children }: Props) {
 				</div>
 				<span className="text-xs text-muted-foreground">{title}</span>
 			</div>
-			<div className="w-full p-1 bg-zinc-800">{children}</div>
+			<div className="w-full min-h-10 p-2 bg-zinc-800">{children}</div>
 		</div>
 	)
 }

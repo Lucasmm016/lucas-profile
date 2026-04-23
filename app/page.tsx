@@ -14,12 +14,12 @@ export default function Home() {
 
 			<main className="flex flex-1 w-full flex-col items-center">
 				<div className="w-full p-4 bg-linear-to-b from-black from-50% to-zinc-900">
-					<section className="w-full max-w-6xl mx-auto flex items-center justify-between gap-2 py-32">
+					<section className="w-full max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-10 lg:py-32">
 						<div className="flex flex-col gap-5">
 							<h3 className="text-primary text-sm">São Paulo, Brasil</h3>
 							<h1 className="text-5xl font-extrabold">Lucas Matos</h1>
 							<h2>Desenvolvedor Full Stack Node.js</h2>
-							<p className="text-muted-foreground max-w-xl">
+							<p className="text-muted-foreground max-w-full lg:max-w-xl">
 								<b>7 anos</b> de experiência em <b>Node.js</b>, <b>React</b> e <b>TypeScript</b>,
 								atuando em aplicações escaláveis web e mobile, banco de dados SQL e NoSQL,
 								infraestrutura em nuvem (AWS), cloud storage (S3/R2) e liderança técnica de
@@ -49,10 +49,10 @@ export default function Home() {
 								</Link>
 							</div>
 						</div>
-						<div>
+						<div className="w-full max-w-72 lg:max-w-96 aspect-square">
 							<div
 								style={{ backgroundImage: "url('/profile.webp')" }}
-								className="relative size-96 bg-size-[150%_auto] bg-position-[center_top_-8rem] rounded-md overflow-hidden"
+								className="relative size-full bg-size-[150%_auto] bg-position-[center_top_-7rem] rounded-md overflow-hidden"
 							>
 								<div className="absolute w-full h-full bg-linear-to-b from-transparent via-transparent to-black"></div>
 							</div>
