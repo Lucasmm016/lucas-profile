@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { Geist_Mono, Inter } from 'next/font/google'
+import { Geist_Mono, JetBrains_Mono } from 'next/font/google'
 
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
 
 import './globals.css'
 
-const inter = Inter({
-	variable: '--font-inter',
+const jetbrainsMono = JetBrains_Mono({
+	variable: '--font-jetbrains-mono',
 	subsets: ['latin'],
-	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 })
 
 const geistMono = Geist_Mono({
@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="pt-BR"
-			className={`${inter.variable} ${geistMono.variable} ${inter.className} h-full antialiased`}
+			className={`${jetbrainsMono.variable} ${geistMono.variable} ${jetbrainsMono.className} h-full antialiased`}
 			suppressHydrationWarning
 		>
 			<body className="min-h-full flex flex-col">
