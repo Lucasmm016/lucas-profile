@@ -9,7 +9,7 @@ export function Header() {
 		<header className="w-full bg-black">
 			<div className="w-full max-w-6xl mx-auto flex items-center justify-between gap-2 px-2 py-4">
 				<Link href="/" className="text-sm">
-					<span className="text-emerald-500">~</span>
+					<span className="text-primary">~</span>
 					/Lucasmm016
 				</Link>
 
