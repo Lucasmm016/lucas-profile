@@ -23,6 +23,7 @@ export function Header() {
 							<Linkedin className="size-6" />
 						</Button>
 					</Link>
+
 					<Link href="https://github.com/Lucasmm016" rel="noopener noreferrer" target="_blank">
 						<Button size="icon-lg" variant="ghost">
 							<Github className="size-6" />
