@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Github from '@/components/icons/Github'
 import Linkedin from '@/components/icons/Linkedin'
+import { ZapflowSaas } from '@/components/projects/zapflow-saas'
 import { Button } from '@/components/ui/button'
 
 export default function Home() {
@@ -71,6 +72,17 @@ export default function Home() {
 						</div>
 
 						<ExperienceTimeline />
+					</section>
+
+					<section className="w-full flex flex-col gap-10">
+						<div className="flex flex-col gap-2">
+							<h3 className="text-primary text-xl font-bold">Portfólio</h3>
+							<p className="text-muted-foreground text-sm">
+								Conheça alguns dos meus projetos mais recentes
+							</p>
+						</div>
+
+						<ZapflowSaas />
 					</section>
 
 					<section className="w-full flex flex-col gap-10">
