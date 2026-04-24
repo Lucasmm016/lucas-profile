@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { Container } from '@/components/Container'
+import { ExperienceTimeline } from '@/components/ExperienceTimeline'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Github from '@/components/icons/Github'
@@ -14,15 +15,15 @@ export default function Home() {
 
 			<main className="flex flex-1 w-full flex-col items-center">
 				<div className="w-full p-4 bg-linear-to-b from-black from-50% to-zinc-900">
-					<section className="w-full max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-10 lg:py-32">
+					<section className="w-full max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-10 lg:py-40">
 						<div className="flex flex-col gap-5">
 							<h3 className="text-primary text-sm">São Paulo, Brasil</h3>
 							<h1 className="text-5xl font-extrabold">Lucas Matos</h1>
 							<h2>Desenvolvedor Full Stack Node.js</h2>
 							<p className="text-muted-foreground max-w-full lg:max-w-xl">
-								<b>7 anos</b> de experiência em <b>Node.js</b>, <b>React</b> e <b>TypeScript</b>,
-								atuando em aplicações escaláveis web e mobile, banco de dados SQL e NoSQL,
-								infraestrutura em nuvem (AWS), cloud storage (S3/R2) e liderança técnica de
+								<b>6 anos</b> de experiência profissional em <b>Node.js</b>, <b>React</b> e{' '}
+								<b>TypeScript</b>, atuando em aplicações escaláveis web e mobile, banco de dados SQL
+								e NoSQL, infraestrutura em nuvem (AWS), cloud storage (S3/R2) e liderança técnica de
 								projetos.
 							</p>
 							<div className="flex gap-2">
@@ -61,42 +62,25 @@ export default function Home() {
 				</div>
 
 				<div className="w-full max-w-6xl flex flex-col items-center gap-10 p-4">
-					<section className="w-full flex items-center justify-between gap-2">
-						<Container title="README.md">
-							<p className="text-sm">
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-								Ipsum has been the industrys standard dummy text ever since the 1500s, when an
-								unknown printer took a galley of type and scrambled it to make a type specimen book.
-								It has survived not only five centuries, but also the leap into electronic
-								typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-								the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-								with desktop publishing software like Aldus PageMaker including versions of Lorem
-								Ipsum.
-								<br />
-								<br />
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-								Ipsum has been the industrys standard dummy text ever since the 1500s, when an
-								unknown printer took a galley of type and scrambled it to make a type specimen book.
-								It has survived not only five centuries, but also the leap into electronic
-								typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-								the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-								with desktop publishing software like Aldus PageMaker including versions of Lorem
-								Ipsum.
-								<br />
-								<br />
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-								Ipsum has been the industrys standard dummy text ever since the 1500s, when an
-								unknown printer took a galley of type and scrambled it to make a type specimen book.
-								It has survived not only five centuries, but also the leap into electronic
-								typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-								the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-								with desktop publishing software like Aldus PageMaker including versions of Lorem
-								Ipsum.
+					<section className="w-full flex flex-col gap-10">
+						<div className="flex flex-col gap-2">
+							<h3 className="text-primary text-xl font-bold">Experiências</h3>
+							<p className="text-muted-foreground text-sm">
+								Timeline das minhas experiências profissionais com desenvolvimento de software
 							</p>
-						</Container>
+						</div>
+
+						<ExperienceTimeline />
 					</section>
 
-					<section className="w-full flex items-center justify-between gap-2">
+					<section className="w-full flex flex-col gap-10">
+						<div className="flex flex-col gap-2">
+							<h3 className="text-primary text-xl font-bold">Stacks utilizadas</h3>
+							<p className="text-muted-foreground text-sm">
+								Conheça as stacks que eu utilizo em meus projetos
+							</p>
+						</div>
+
 						<Container title="README.md">
 							<p className="text-sm">
 								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem

@@ -1,9 +1,12 @@
+import { cn } from '@/lib/utils'
+
 interface Props {
 	title: string
 	children: React.ReactNode
+	className?: string
 }
 
-export function Container({ title, children }: Props) {
+export function Container({ title, children, className }: Props) {
 	return (
 		<div className="w-full rounded-md border border-border overflow-hidden">
 			<div className="w-full flex items-center gap-2 border-b border-border p-2">
@@ -14,7 +17,7 @@ export function Container({ title, children }: Props) {
 				</div>
 				<span className="text-xs text-muted-foreground">{title}</span>
 			</div>
-			<div className="w-full min-h-10 p-2 bg-zinc-800">{children}</div>
+			<div className={cn('w-full min-h-10 p-2 bg-zinc-800', className)}>{children}</div>
 		</div>
 	)
 }
