@@ -6,6 +6,7 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Github from '@/components/icons/Github'
 import Linkedin from '@/components/icons/Linkedin'
+import { ZapflowExtension } from '@/components/projects/zapflow-extension'
 import { ZapflowSaas } from '@/components/projects/zapflow-saas'
 import { Button } from '@/components/ui/button'
 
@@ -83,6 +84,7 @@ export default function Home() {
 						</div>
 
 						<ZapflowSaas />
+						<ZapflowExtension />
 					</section>
 
 					<section className="w-full flex flex-col gap-10">
