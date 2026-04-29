@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import Github from './icons/Github'
 import Linkedin from './icons/Linkedin'
+import Whatsapp from './icons/Whatsapp'
 import { Button } from './ui/button'
 
 export function Header() {
@@ -14,6 +15,12 @@ export function Header() {
 				</Link>
 
 				<div className="flex items-center gap-2">
+					<Link href="https://wa.me/5515988234382" rel="noopener noreferrer" target="_blank">
+						<Button size="icon-lg" variant="ghost">
+							<Whatsapp className="size-6" />
+						</Button>
+					</Link>
+
 					<Link
 						href="https://www.linkedin.com/in/lucas016/"
 						rel="noopener noreferrer"

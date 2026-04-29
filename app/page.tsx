@@ -1,10 +1,12 @@
 import Link from 'next/link'
 
+import { Contact } from '@/components/Contact'
 import { ExperienceTimeline } from '@/components/ExperienceTimeline'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Github from '@/components/icons/Github'
 import Linkedin from '@/components/icons/Linkedin'
+import Whatsapp from '@/components/icons/Whatsapp'
 import { WaveSensor } from '@/components/projects/wave-sensor'
 import { ZapflowExtension } from '@/components/projects/zapflow-extension'
 import { ZapflowSaas } from '@/components/projects/zapflow-saas'
@@ -29,13 +31,26 @@ export default function Home() {
 								e NoSQL, infraestrutura em nuvem (AWS), cloud storage (S3/R2) e liderança técnica de
 								projetos.
 							</p>
-							<div className="flex gap-2">
+							<div className="flex items-center flex-col md:flex-row gap-2">
+								<Link
+									href="https://wa.me/5515988234382"
+									rel="noopener noreferrer"
+									target="_blank"
+									className="w-full md:w-auto"
+								>
+									<Button variant="outline" className="w-full">
+										<Whatsapp />
+										WhatsApp
+									</Button>
+								</Link>
+
 								<Link
 									href="https://www.linkedin.com/in/lucas016/"
 									rel="noopener noreferrer"
 									target="_blank"
+									className="w-full md:w-auto"
 								>
-									<Button variant="outline">
+									<Button variant="outline" className="w-full">
 										<Linkedin />
 										Linkedin
 									</Button>
@@ -45,8 +60,9 @@ export default function Home() {
 									href="https://github.com/Lucasmm016"
 									rel="noopener noreferrer"
 									target="_blank"
+									className="w-full md:w-auto"
 								>
-									<Button variant="outline">
+									<Button variant="outline" className="w-full">
 										<Github />
 										GitHub
 									</Button>
@@ -98,6 +114,26 @@ export default function Home() {
 						</div>
 
 						<Skills />
+					</section>
+
+					<section className="w-full flex flex-col gap-10">
+						<div className="flex flex-col gap-2">
+							<h3 className="text-primary text-xl font-bold">Contato</h3>
+							<p className="text-muted-foreground text-sm">
+								Contato profissional para projetos, oportunidades e ideias
+							</p>
+						</div>
+
+						<div className="flex flex-col gap-4">
+							<p className="text-sm">
+								Você pode me encontrar nas redes sociais abaixo ou enviar um e-mail para{' '}
+								<a href="mailto:lucasmm016@gmail.com" className="text-primary">
+									lucasmm016@gmail.com
+								</a>
+							</p>
+
+							<Contact />
+						</div>
 					</section>
 				</div>
 			</main>
