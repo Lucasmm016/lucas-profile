@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { contact } from '@/utils/contact'
+
 import Github from './icons/Github'
 import Linkedin from './icons/Linkedin'
 import Whatsapp from './icons/Whatsapp'
@@ -9,7 +11,7 @@ export function Contact() {
 	return (
 		<div className="flex items-center flex-col md:flex-row gap-2">
 			<Link
-				href="https://wa.me/5515988234382"
+				href={contact.whatsapp}
 				rel="noopener noreferrer"
 				target="_blank"
 				className="w-full md:w-auto"
@@ -21,7 +23,7 @@ export function Contact() {
 			</Link>
 
 			<Link
-				href="https://www.linkedin.com/in/lucas016/"
+				href={contact.linkedin}
 				rel="noopener noreferrer"
 				target="_blank"
 				className="w-full md:w-auto"
@@ -33,7 +35,7 @@ export function Contact() {
 			</Link>
 
 			<Link
-				href="https://github.com/Lucasmm016"
+				href={contact.github}
 				rel="noopener noreferrer"
 				target="_blank"
 				className="w-full md:w-auto"

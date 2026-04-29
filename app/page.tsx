@@ -12,6 +12,7 @@ import { ZapflowExtension } from '@/components/projects/zapflow-extension'
 import { ZapflowSaas } from '@/components/projects/zapflow-saas'
 import { Skills } from '@/components/Skills'
 import { Button } from '@/components/ui/button'
+import { contact } from '@/utils/contact'
 
 export default function Home() {
 	return (
@@ -33,7 +34,7 @@ export default function Home() {
 							</p>
 							<div className="flex items-center flex-col md:flex-row gap-2">
 								<Link
-									href="https://wa.me/5515988234382"
+									href={contact.whatsapp}
 									rel="noopener noreferrer"
 									target="_blank"
 									className="w-full md:w-auto"
@@ -45,7 +46,7 @@ export default function Home() {
 								</Link>
 
 								<Link
-									href="https://www.linkedin.com/in/lucas016/"
+									href={contact.linkedin}
 									rel="noopener noreferrer"
 									target="_blank"
 									className="w-full md:w-auto"
@@ -57,7 +58,7 @@ export default function Home() {
 								</Link>
 
 								<Link
-									href="https://github.com/Lucasmm016"
+									href={contact.github}
 									rel="noopener noreferrer"
 									target="_blank"
 									className="w-full md:w-auto"
@@ -127,8 +128,8 @@ export default function Home() {
 						<div className="flex flex-col gap-4">
 							<p className="text-sm">
 								Você pode me encontrar nas redes sociais abaixo ou enviar um e-mail para{' '}
-								<a href="mailto:lucasmm016@gmail.com" className="text-primary">
-									lucasmm016@gmail.com
+								<a href={`mailto:${contact.email}`} className="text-primary">
+									{contact.email}
 								</a>
 							</p>
 

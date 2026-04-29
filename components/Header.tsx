@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { contact } from '@/utils/contact'
+
 import Github from './icons/Github'
 import Linkedin from './icons/Linkedin'
 import Whatsapp from './icons/Whatsapp'
@@ -15,23 +17,19 @@ export function Header() {
 				</Link>
 
 				<div className="flex items-center gap-2">
-					<Link href="https://wa.me/5515988234382" rel="noopener noreferrer" target="_blank">
+					<Link href={contact.whatsapp} rel="noopener noreferrer" target="_blank">
 						<Button size="icon-lg" variant="ghost">
 							<Whatsapp className="size-6" />
 						</Button>
 					</Link>
 
-					<Link
-						href="https://www.linkedin.com/in/lucas016/"
-						rel="noopener noreferrer"
-						target="_blank"
-					>
+					<Link href={contact.linkedin} rel="noopener noreferrer" target="_blank">
 						<Button size="icon-lg" variant="ghost">
 							<Linkedin className="size-6" />
 						</Button>
 					</Link>
 
-					<Link href="https://github.com/Lucasmm016" rel="noopener noreferrer" target="_blank">
+					<Link href={contact.github} rel="noopener noreferrer" target="_blank">
 						<Button size="icon-lg" variant="ghost">
 							<Github className="size-6" />
 						</Button>
