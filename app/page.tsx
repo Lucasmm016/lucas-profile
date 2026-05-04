@@ -9,7 +9,7 @@ import Linkedin from '@/components/icons/Linkedin'
 import Whatsapp from '@/components/icons/Whatsapp'
 import { WaveSensor } from '@/components/projects/wave-sensor'
 import { ZapflowExtension } from '@/components/projects/zapflow-extension'
-import { ZapflowSaas } from '@/components/projects/zapflow-saas'
+import { WhatsappSaas } from '@/components/projects/whatsapp-saas'
 import { Skills } from '@/components/Skills'
 import { Button } from '@/components/ui/button'
 import { contact } from '@/utils/contact'
@@ -101,7 +101,7 @@ export default function Home() {
 							</p>
 						</div>
 
-						<ZapflowSaas />
+						<WhatsappSaas />
 						<WaveSensor />
 						<ZapflowExtension />
 					</section>
