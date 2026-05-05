@@ -6,6 +6,7 @@ import { Fullscreen, Pause, Play } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export function CustomVideo({ src }: { src: string }) {
+	const [isPausedManually, setIsPausedManually] = useState(false)
 	const [isPlaying, setIsPlaying] = useState(false)
 	const videoRef = useRef<HTMLVideoElement>(null)
 
@@ -16,9 +17,11 @@ export function CustomVideo({ src }: { src: string }) {
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				if (entry.isIntersecting) {
-					video.muted = true
-					video.play()
-					setIsPlaying(true)
+					if (!isPausedManually) {
+						video.muted = true
+						video.play()
+						setIsPlaying(true)
+					}
 				} else {
 					video.pause()
 					setIsPlaying(false)
@@ -32,24 +35,25 @@ export function CustomVideo({ src }: { src: string }) {
 		observer.observe(video)
 
 		return () => observer.disconnect()
-	}, [])
+	}, [isPausedManually])
 
 	function handlePlayPause() {
-		if (videoRef.current) {
-			if (videoRef.current.paused) {
-				videoRef.current.play()
-				setIsPlaying(true)
-			} else {
-				videoRef.current.pause()
-				setIsPlaying(false)
-			}
+		if (!videoRef.current) return
+
+		if (videoRef.current.paused) {
+			videoRef.current.play()
+			setIsPlaying(true)
+			setIsPausedManually(false)
+		} else {
+			videoRef.current.pause()
+			setIsPlaying(false)
+			setIsPausedManually(true)
 		}
 	}
 
 	function handleFullscreen() {
-		if (videoRef.current) {
-			videoRef.current.requestFullscreen()
-		}
+		if (!videoRef.current) return
+		videoRef.current.requestFullscreen()
 	}
 
 	return (
