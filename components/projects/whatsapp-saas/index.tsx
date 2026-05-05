@@ -10,16 +10,14 @@ import { StackTable } from './StackTable'
 export function WhatsappSaas() {
 	return (
 		<Container title="whatsapp-saas.md" className="flex flex-col gap-4 text-sm">
-			<h1 className="text-lg font-bold">
-				Plataforma de automação completa para WhatsApp - Zapflow
-			</h1>
+			<h1 className="text-lg font-bold">Plataforma de automação completa para WhatsApp</h1>
 			<div className="flex items-center gap-2 text-muted-foreground">
 				<Calendar className="size-4" />
 				<h3 className="text-sm">
 					Início em Dezembro de 2025 - Última atualização em Abril de 2026
 				</h3>
 			</div>
-			<Link href="https://app.zapfloww.com.br" rel="noopener noreferrer" target="_blank">
+			<Link href="https://app.katanacrm.com.br" rel="noopener noreferrer" target="_blank">
 				<Button variant="link" className="p-0">
 					<ExternalLink />
 					Link para o projeto
