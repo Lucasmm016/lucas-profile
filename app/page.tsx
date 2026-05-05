@@ -8,7 +8,7 @@ import Github from '@/components/icons/Github'
 import Linkedin from '@/components/icons/Linkedin'
 import Whatsapp from '@/components/icons/Whatsapp'
 import { WaveSensor } from '@/components/projects/wave-sensor'
-import { ZapflowExtension } from '@/components/projects/zapflow-extension'
+import { WhatsappExtension } from '@/components/projects/whatsapp-extension'
 import { WhatsappSaas } from '@/components/projects/whatsapp-saas'
 import { Skills } from '@/components/Skills'
 import { Button } from '@/components/ui/button'
@@ -103,7 +103,7 @@ export default function Home() {
 
 						<WhatsappSaas />
 						<WaveSensor />
-						<ZapflowExtension />
+						<WhatsappExtension />
 					</section>
 
 					<section className="w-full flex flex-col gap-10">
