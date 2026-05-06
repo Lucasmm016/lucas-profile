@@ -35,7 +35,10 @@ export function WhatsappExtension() {
 				automações.
 			</p>
 
-			<CustomVideo src="/projects/whatsapp-extension.mp4" />
+			<CustomVideo
+				src="/projects/whatsapp-extension.mp4"
+				posterSrc="/projects/whatsapp-extension.png"
+			/>
 
 			<p className="font-bold">O que ela permite fazer:</p>
 			<ul className="list-disc list-inside ml-4 space-y-2">

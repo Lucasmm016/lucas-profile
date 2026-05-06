@@ -5,9 +5,13 @@ import { Fullscreen, Pause, Play } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
-export function CustomVideo({ src }: { src: string }) {
+const THRESHOLD = 0.4 // 40% visível
+
+export function CustomVideo({ src, posterSrc }: { src: string; posterSrc: string }) {
+	const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
 	const [isPausedManually, setIsPausedManually] = useState(false)
 	const [isPlaying, setIsPlaying] = useState(false)
+
 	const videoRef = useRef<HTMLVideoElement>(null)
 
 	useEffect(() => {
@@ -16,37 +20,48 @@ export function CustomVideo({ src }: { src: string }) {
 
 		const observer = new IntersectionObserver(
 			([entry]) => {
-				if (entry.isIntersecting) {
-					if (!isPausedManually) {
-						video.muted = true
-						video.play()
-						setIsPlaying(true)
+				const isVisible = entry.isIntersecting && entry.intersectionRatio >= THRESHOLD
+
+				if (isVisible) {
+					if (shouldLoadVideo) {
+						if (!isPausedManually) {
+							video.muted = true
+							void video.play().catch(() => {})
+						}
+					} else {
+						setShouldLoadVideo(true)
 					}
 				} else {
 					video.pause()
-					setIsPlaying(false)
 				}
 			},
 			{
-				threshold: 0.3, // 30% visível
+				threshold: THRESHOLD,
 			},
 		)
 
 		observer.observe(video)
 
 		return () => observer.disconnect()
-	}, [isPausedManually])
+	}, [isPausedManually, shouldLoadVideo])
 
 	function handlePlayPause() {
-		if (!videoRef.current) return
+		const video = videoRef.current
+		if (!video) return
 
-		if (videoRef.current.paused) {
-			videoRef.current.play()
-			setIsPlaying(true)
-			setIsPausedManually(false)
+		if (!shouldLoadVideo) {
+			setShouldLoadVideo(true)
+			return
+		}
+
+		if (video.paused) {
+			video.muted = true
+			void video
+				.play()
+				.then(() => setIsPausedManually(false))
+				.catch(() => {})
 		} else {
-			videoRef.current.pause()
-			setIsPlaying(false)
+			video.pause()
 			setIsPausedManually(true)
 		}
 	}
@@ -60,12 +75,16 @@ export function CustomVideo({ src }: { src: string }) {
 		<div className="group/video relative">
 			<video
 				ref={videoRef}
-				className="w-full aspect-video rounded-md border border-border bg-zinc-700 object-cover"
-				src={src}
+				onPlay={() => setIsPlaying(true)}
+				onPause={() => setIsPlaying(false)}
+				src={shouldLoadVideo ? src : undefined}
+				poster={posterSrc}
+				autoPlay={shouldLoadVideo}
 				loop
 				muted
 				playsInline
-				preload="metadata"
+				preload={shouldLoadVideo ? 'metadata' : 'none'}
+				className="w-full aspect-video rounded-md border border-border bg-zinc-700 object-cover"
 			/>
 
 			<div

@@ -36,7 +36,7 @@ export function WhatsappSaas() {
 				de créditos.
 			</p>
 
-			<CustomVideo src="/projects/whatsapp-saas.mp4" />
+			<CustomVideo src="/projects/whatsapp-saas.mp4" posterSrc="/projects/whatsapp-saas.png" />
 
 			<p className="font-bold">O que a plataforma faz:</p>
 			<ul className="list-disc list-inside ml-4 space-y-2">
