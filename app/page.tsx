@@ -142,7 +142,7 @@ export default function Home() {
 							<h3 className="text-primary text-xl font-bold">Este site</h3>
 							<p className="text-sm">
 								Este site foi desenvolvido por mim usando <b>Next.js</b>, <b>Tailwind CSS</b>,{' '}
-								<b>TypeScript</b> e <b>Shadcn UI</b>. Acesse o UI. Acesse o{' '}
+								<b>TypeScript</b> e <b>Shadcn UI</b>. Acesse o{' '}
 								<a
 									href="https://github.com/Lucasmm016/lucas-profile"
 									target="_blank"

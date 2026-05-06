@@ -6,14 +6,14 @@ const items = [
 		title: 'Desenvolvedor Full Stack Node.js',
 		subtitle: 'Zapflow Software LTDA, Bahia, Brasil - Remoto',
 		description:
-			'Responsável pelo desenvolvimento de soluções web de mensageria para empresas oferecendo soluções modernas utilizadas por mais de 1000 clientes e empresas no Brasil, Estados Unidos e Moçambique. Utilização de tecnologias como Node.js, Next.js, TypeScript, infraestrutura em nuvem (AWS), cloud storage (R2), banco de dados Postgres e MongoDB, integração com Meta Cloud API entre outras APIs externas e sistema de filas e workflows com Inngest.',
+			'Responsável pelo desenvolvimento de soluções web de mensageria para empresas oferecendo soluções para mais de 1000 clientes ativos no Brasil, Estados Unidos e Moçambique. Utilização de tecnologias como Node.js, Next.js, TypeScript, infraestrutura em nuvem (AWS), cloud storage (R2), banco de dados Postgres e MongoDB, integração com Meta Cloud API entre outras APIs externas e sistema de filas e workflows com Inngest.',
 	},
 	{
 		period: 'Dezembro de 2021 - Novembro de 2024',
 		title: 'Desenvolvedor Full Stack Node.js',
 		subtitle: 'Octroz Desenvolvimento de Software, São Paulo, Brasil - Híbrido',
 		description:
-			'Responsável pelo desenvolvimento de soluções robustas Web e Mobile sob demanda para clientes e empresas no brasileiras. Utilização de tecnologias como Node.js, React, TypeScript, infraestrutura em nuvem (AWS/GCP), cloud storage (S3/R2), banco de dados SQL e NoSQL, integrações com APIs externas, etc. Gestão de times de desenvolvimento e liderança de projetos.',
+			'Responsável pelo desenvolvimento de soluções robustas Web e Mobile sob demanda para clientes e empresas brasileiras. Utilização de tecnologias como Node.js, React, TypeScript, infraestrutura em nuvem (AWS/GCP), cloud storage (S3/R2), banco de dados SQL e NoSQL, integrações com APIs externas, etc. Gestão de times de desenvolvimento e liderança de projetos.',
 	},
 	{
 		period: 'Julho de 2020 - Dezembro de 2021',

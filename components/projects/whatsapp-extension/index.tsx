@@ -68,14 +68,14 @@ export function WhatsappExtension() {
 				da <b>wppconnect</b>, que roda dentro do próprio contexto da página do WhatsApp.
 			</p>
 			<p>
-				Os dados do usuário (scripts, agendamentos etc.) ficam salvos localmente no navegador usando
-				<b>IndexedDB via Dexie</b>. A autenticação é feita contra uma API REST própria, com tokens
-				JWT guardados no storage da extensão.
+				Os dados do usuário (scripts, agendamentos etc.) ficam salvos localmente no navegador usando{' '}
+				<b>IndexedDB</b>. A autenticação é feita usando uma API REST desenvolvida com <b>Fastify</b>{' '}
+				e sistema de token e refresh token JWT.
 			</p>
 			<p>
 				A extensão tem três partes que se comunicam entre si: o <b>service worker</b> (cuida da
-				autenticação e chamadas de rede), o <b>content script</b> isolado (roda o React e a UI) e o{' '}
-				<b>content script no mundo MAIN</b> (faz a automação real do WhatsApp via wa-js).
+				autenticação e requisições HTTP), o <b>content script</b> isolado (roda o React e a UI) e o{' '}
+				<b>content script no mundo MAIN</b> (faz a automação real do WhatsApp).
 			</p>
 			<p>
 				No build da extensão utilizando <b>Webpack</b>, foi desenvolvido um plugin customizado que
