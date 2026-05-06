@@ -1,49 +1,17 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { Fullscreen, Pause, Play } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
-const THRESHOLD = 0.4 // 40% visível
+import { useAutoPlayVideoOnVisibility } from './hooks/useAutoPlayVideoOnVisibility'
 
 export function CustomVideo({ src, posterSrc }: { src: string; posterSrc: string }) {
-	const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
-	const [isPausedManually, setIsPausedManually] = useState(false)
 	const [isPlaying, setIsPlaying] = useState(false)
 
-	const videoRef = useRef<HTMLVideoElement>(null)
-
-	useEffect(() => {
-		const video = videoRef.current
-		if (!video) return
-
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				const isVisible = entry.isIntersecting && entry.intersectionRatio >= THRESHOLD
-
-				if (isVisible) {
-					if (shouldLoadVideo) {
-						if (!isPausedManually) {
-							video.muted = true
-							void video.play().catch(() => {})
-						}
-					} else {
-						setShouldLoadVideo(true)
-					}
-				} else {
-					video.pause()
-				}
-			},
-			{
-				threshold: THRESHOLD,
-			},
-		)
-
-		observer.observe(video)
-
-		return () => observer.disconnect()
-	}, [isPausedManually, shouldLoadVideo])
+	const { videoRef, setIsPausedManually, shouldLoadVideo, setShouldLoadVideo } =
+		useAutoPlayVideoOnVisibility({})
 
 	function handlePlayPause() {
 		const video = videoRef.current
