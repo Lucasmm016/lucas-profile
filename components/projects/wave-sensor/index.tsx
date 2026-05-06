@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Calendar, Image as ImageIcon } from 'lucide-react'
 
 import { Container } from '@/components/Container'
@@ -20,9 +21,21 @@ export function WaveSensor() {
 				A arquitetura foi projetada com foco em <b>eficiência energética</b>, <b>escalabilidade</b>{' '}
 				e<b>confiabilidade</b> na aquisição e <b>processamento de dados em tempo real</b>.
 			</p>
-			<div className="w-full aspect-video flex items-center justify-center rounded-md border border-border bg-zinc-700">
-				<ImageIcon className="size-8 text-muted-foreground" />
+
+			<div className="w-full block md:hidden p-4 rounded-md border border-border bg-zinc-700">
+				<Image
+					src="/projects/wave-sensor-mobile.png"
+					alt="Wave Sensor - Mobile"
+					width={1080}
+					height={1920}
+					className="w-full max-w-md mx-auto rounded-md shadow-xl shadow-black/50"
+				/>
 			</div>
+
+			<div className="w-full aspect-video hidden md:flex items-center justify-center rounded-md border border-border bg-zinc-700">
+				<Image src="/projects/wave-sensor.png" alt="Wave Sensor" width={1920} height={1080} />
+			</div>
+
 			<p>
 				O sistema inicia com um dispositivo embarcado microcontrolado com firmware desenvolvido em{' '}
 				<b>C/C++</b>, o dispositivo é responsável pela coleta de dados de vibração e temperatura
@@ -40,7 +53,7 @@ export function WaveSensor() {
 				Artificial e modelo de Machine Learning salvando os resultados obtidos em um banco de dados.
 			</p>
 			<p>
-				O sistema conta com uma plataforma WEB desenvolvida utilizando <b>Next.js</b>,{' '}
+				O sistema conta com uma plataforma Web PWA desenvolvida utilizando <b>Next.js</b>,{' '}
 				<b>TypeScript</b>, <b>autenticação com token e refresh token JWT</b>, permitindo que o
 				usuário monitore as principais métricas do seu ativo industrial, contando com gráficos de
 				espectro de vibração, RMS, RPM, temperatura, entre outras métricas, também possibilitando o
