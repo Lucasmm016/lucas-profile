@@ -128,12 +128,31 @@ export default function Home() {
 						<div className="flex flex-col gap-4">
 							<p className="text-sm">
 								Você pode me encontrar nas redes sociais abaixo ou enviar um e-mail para{' '}
-								<a href={`mailto:${contact.email}`} className="text-primary">
+								<a href={`mailto:${contact.email}`} className="text-primary underline">
 									{contact.email}
 								</a>
 							</p>
 
 							<Contact />
+						</div>
+					</section>
+
+					<section className="w-full flex flex-col gap-10">
+						<div className="flex flex-col gap-2">
+							<h3 className="text-primary text-xl font-bold">Este site</h3>
+							<p className="text-sm">
+								Este site foi desenvolvido por mim usando <b>Next.js</b>, <b>Tailwind CSS</b>,{' '}
+								<b>TypeScript</b> e <b>Shadcn UI</b>. Acesse o UI. Acesse o{' '}
+								<a
+									href="https://github.com/Lucasmm016/lucas-profile"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="text-primary underline"
+								>
+									repositório no Github
+								</a>{' '}
+								para ver o código fonte.
+							</p>
 						</div>
 					</section>
 				</div>
