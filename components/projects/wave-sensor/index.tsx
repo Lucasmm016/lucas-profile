@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Calendar, Image as ImageIcon } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 
 import { Container } from '@/components/Container'
 
@@ -13,13 +13,13 @@ export function WaveSensor() {
 			</div>
 			<p>
 				Este projeto consiste em uma solução completa de manutenção preditiva para maquinário
-				industrial, combinando dispositivos embarcados de baixo consumo, comunicação segura e
-				criptografada, processamento em nuvem e análise baseada em Inteligência Artificial e modelo
-				de Machine Learning.
+				industrial, combinando dispositivos microcontrolados embarcados de baixo consumo,
+				comunicação segura e criptografada, processamento em nuvem e análise baseada em Inteligência
+				Artificial e modelo de Machine Learning.
 			</p>
 			<p>
 				A arquitetura foi projetada com foco em <b>eficiência energética</b>, <b>escalabilidade</b>{' '}
-				e<b>confiabilidade</b> na aquisição e <b>processamento de dados em tempo real</b>.
+				e <b>confiabilidade</b> na aquisição e processamento de dados <b>em tempo real</b>.
 			</p>
 
 			<div className="w-full block md:hidden p-4 rounded-md border border-border bg-zinc-700">
@@ -32,14 +32,20 @@ export function WaveSensor() {
 				/>
 			</div>
 
-			<div className="w-full aspect-video hidden md:flex items-center justify-center rounded-md border border-border bg-zinc-700">
-				<Image src="/projects/wave-sensor.png" alt="Wave Sensor" width={1920} height={1080} />
+			<div className="w-full aspect-video hidden md:flex items-center justify-center p-4 rounded-md border border-border bg-zinc-700">
+				<Image
+					src="/projects/wave-sensor.png"
+					alt="Wave Sensor"
+					width={1920}
+					height={1080}
+					className="rounded-md shadow-xl shadow-black/50"
+				/>
 			</div>
 
 			<p>
 				O sistema inicia com um dispositivo embarcado microcontrolado com firmware desenvolvido em{' '}
 				<b>C/C++</b>, o dispositivo é responsável pela coleta de dados de vibração e temperatura
-				diretamente no maquinário.
+				diretamente no ativo industrial.
 			</p>
 			<p>
 				Um segundo dispositivo embarcado microcontrolado com firmware também desenvolvido em{' '}
@@ -49,18 +55,19 @@ export function WaveSensor() {
 			</p>
 			<p>
 				Um servidor em nuvem desenvolvido com <b>Python</b> é responsável por receber todos os dados
-				coletados, checar a assinatura HMAC e realizar o processamento dos dados com Inteligência
-				Artificial e modelo de Machine Learning salvando os resultados obtidos em um banco de dados.
+				do dispositivo gateway, checar a assinatura HMAC e realizar o processamento dos dados com{' '}
+				<b>Inteligência Artificial</b> e <b>modelo de Machine Learning</b> salvando os resultados
+				obtidos em um banco de dados.
 			</p>
 			<p>
-				O sistema conta com uma plataforma Web PWA desenvolvida utilizando <b>Next.js</b>,{' '}
+				O sistema conta com uma <b>plataforma Web PWA</b> desenvolvida utilizando <b>Next.js</b>,{' '}
 				<b>TypeScript</b>, <b>autenticação com token e refresh token JWT</b>, permitindo que o
 				usuário monitore as principais métricas do seu ativo industrial, contando com gráficos de
-				espectro de vibração, RMS, RPM, temperatura, entre outras métricas, também possibilitando o
-				usuário configurar alertas para métricas específicas e ser notificado via email e WhatsApp
-				em tempo real. A plataforma conta com insights gerados pela IA (em conjunto com o modelo de
-				Machine Learning) sobre a saúde do ativo industrial, também permitindo o gerenciamento de
-				times e setores (sistema multi-tenant).
+				espectro de vibração, RMS, RPM e temperatura, também possibilitando o usuário configurar{' '}
+				<b>alertas</b> para métricas específicas e ser notificado via <b>email</b> e <b>WhatsApp</b>{' '}
+				em tempo real. A plataforma conta com <b>insights</b> gerados pela IA (em conjunto com o
+				modelo de Machine Learning) sobre a saúde do ativo industrial, também permitindo o
+				gerenciamento de times e setores (sistema multi-tenant).
 			</p>
 			<p className="font-bold">Características principais:</p>
 			<ul className="list-disc list-inside ml-4 space-y-2">
@@ -68,7 +75,7 @@ export function WaveSensor() {
 				<li>Leitura de temperatura</li>
 				<li>Alimentação por bateria com autonomia projetada de até 3 anos</li>
 				<li>
-					Firmware desenvolvido em C/C++ no ambiente ESP-IDF com sistema de update OTA e
+					Firmware desenvolvido em <b>C/C++</b> no ambiente ESP-IDF com sistema de update OTA e
 					versionamento de código
 				</li>
 				<li>
@@ -77,7 +84,7 @@ export function WaveSensor() {
 				</li>
 				<li>
 					Modelo de Inteligência Artificial e Machine Learning desenvolvido com Python, scikit-learn
-					e TensorFlow para detecção de anomalias e previsão de falhas
+					e TensorFlow para <b>detecção de anomalias</b> e previsão de falhas
 				</li>
 			</ul>
 			<p className="font-bold">Processamento local (edge):</p>

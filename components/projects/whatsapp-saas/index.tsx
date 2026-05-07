@@ -46,7 +46,7 @@ export function WhatsappSaas() {
 				</li>
 				<li>
 					<b>Fluxos de automação</b> - o usuário monta visualmente (drag-and-drop com React Flow)
-					sequências de mensagens automáticas com delays, textos, mídias e templates HSM que são
+					sequências de mensagens automáticas com delays, textos, mídias e templates que são
 					disparadas em uma conversa
 				</li>
 				<li>
