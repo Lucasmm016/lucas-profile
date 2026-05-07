@@ -2,7 +2,7 @@ import { Separator } from './ui/separator'
 
 const items = [
 	{
-		period: 'Novembro de 2024 - Atual',
+		period: 'Novembro de 2024 - Abril de 2026',
 		title: 'Desenvolvedor Full Stack Node.js',
 		subtitle: 'Zapflow Software LTDA, Bahia, Brasil - Remoto',
 		description:
@@ -13,7 +13,7 @@ const items = [
 		title: 'Desenvolvedor Full Stack Node.js',
 		subtitle: 'Octroz Desenvolvimento de Software, São Paulo, Brasil - Híbrido',
 		description:
-			'Responsável pelo desenvolvimento de soluções robustas Web e Mobile sob demanda para clientes e empresas brasileiras. Utilização de tecnologias como Node.js, React, TypeScript, infraestrutura em nuvem (AWS/GCP), cloud storage (S3/R2), banco de dados SQL e NoSQL, integrações com APIs externas, etc. Gestão de times de desenvolvimento e liderança de projetos.',
+			'Responsável pelo desenvolvimento de soluções Web e Mobile robustas sob demanda para clientes e empresas brasileiras. Utilização de tecnologias como Node.js, React, TypeScript, infraestrutura em nuvem (AWS/GCP), cloud storage (S3/R2), banco de dados SQL e NoSQL, integrações com APIs externas, etc. Gestão de times de desenvolvimento e liderança de projetos.',
 	},
 	{
 		period: 'Julho de 2020 - Dezembro de 2021',
