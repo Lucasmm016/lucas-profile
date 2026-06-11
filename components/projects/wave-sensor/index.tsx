@@ -6,20 +6,21 @@ import { Container } from '@/components/Container'
 export function WaveSensor() {
 	return (
 		<Container title="wave-sensor.md" className="flex flex-col gap-4 text-sm">
-			<h1 className="text-lg font-bold">Manutenção Preditiva com IA</h1>
+			<h1 className="text-lg font-bold">Análise de vibração com IA</h1>
 			<div className="flex items-center gap-2 text-muted-foreground">
 				<Calendar className="size-4" />
-				<h3 className="text-sm">Início em Junho de 2023 - Última atualização em Abril de 2026</h3>
+				<h3 className="text-sm">Início em Junho de 2023 - Última atualização em Junho de 2026</h3>
 			</div>
 			<p>
-				Este projeto consiste em uma solução completa de manutenção preditiva para maquinário
-				industrial, combinando dispositivos microcontrolados embarcados de baixo consumo,
-				comunicação segura e criptografada, processamento em nuvem e análise baseada em Inteligência
-				Artificial e modelo de Machine Learning.
+				Este projeto consiste em uma solução completa de análise de vibração e manutenção preditiva
+				para maquinário industrial, combinando microcontrolados embarcados de baixo consumo
+				energético, comunicação segura e criptografada, utilização de Bluetooth LE 5, processamento
+				de dados em nuvem e análise baseada em Inteligência Artificial e modelo de Machine Learning.
 			</p>
 			<p>
-				A arquitetura foi projetada com foco em <b>eficiência energética</b>, <b>escalabilidade</b>{' '}
-				e <b>confiabilidade</b> na aquisição e processamento de dados <b>em tempo real</b>.
+				A arquitetura foi projetada com foco em <b>eficiência energética</b>,{' '}
+				<b>production-ready</b> e <b>confiabilidade</b> na aquisição e processamento de dados{' '}
+				<b>em tempo real</b>.
 			</p>
 
 			<div className="w-full block md:hidden p-4 rounded-md border border-border bg-zinc-700">
@@ -75,8 +76,8 @@ export function WaveSensor() {
 				<li>Leitura de temperatura</li>
 				<li>Alimentação por bateria com autonomia projetada de até 3 anos</li>
 				<li>
-					Firmware desenvolvido em <b>C/C++</b> no ambiente ESP-IDF com sistema de update OTA e
-					versionamento de código
+					Firmware desenvolvido em <b>C/C++</b> no ambiente ESP-IDF, nRF Connect (Nordic) e
+					Simplicity Studio (Silicon Labs) com sistema de update OTA e versionamento de código
 				</li>
 				<li>
 					Arquitetura otimizada para <b>baixo consumo energético</b>,{' '}
