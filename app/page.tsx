@@ -101,8 +101,8 @@ export default function Home() {
 							</p>
 						</div>
 
-						<WhatsappSaas />
 						<WaveSensor />
+						<WhatsappSaas />
 						<WhatsappExtension />
 					</section>
 

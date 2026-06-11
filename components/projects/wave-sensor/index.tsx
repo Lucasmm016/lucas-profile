@@ -14,7 +14,7 @@ export function WaveSensor() {
 			<p>
 				Este projeto consiste em uma solução completa de análise de vibração e manutenção preditiva
 				para maquinário industrial, combinando microcontrolados embarcados de baixo consumo
-				energético, comunicação segura e criptografada, utilização de Bluetooth LE 5, processamento
+				energético, comunicação segura e criptografada, conectividade Bluetooth LE 5, processamento
 				de dados em nuvem e análise baseada em Inteligência Artificial e modelo de Machine Learning.
 			</p>
 			<p>
