@@ -74,7 +74,10 @@ export function WaveSensor() {
 			<ul className="list-disc list-inside ml-4 space-y-2">
 				<li>Aquisição de vibração em 3 eixos (X, Y, Z) com acelerômetro de até 6.6 kHz</li>
 				<li>Leitura de temperatura</li>
-				<li>Alimentação por bateria com autonomia projetada de até 3 anos</li>
+				<li>
+					Alimentação por bateria com autonomia projetada de até 3 anos com leituras completas a
+					cada 5 minutos
+				</li>
 				<li>
 					Firmware desenvolvido em <b>C/C++</b> no ambiente ESP-IDF, nRF Connect (Nordic) e
 					Simplicity Studio (Silicon Labs) com sistema de update OTA e versionamento de código

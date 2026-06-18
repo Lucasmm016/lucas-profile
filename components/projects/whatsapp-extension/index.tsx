@@ -64,8 +64,9 @@ export function WhatsappExtension() {
 			<p className="font-bold">Como foi construída:</p>
 			<p>
 				A extensão usa <b>React + TypeScript</b> para a interface e <b>Webpack</b> para o build. A
-				estilização é feita com Tailwind CSS. A comunicação com o WhatsApp é feita pela biblioteca
-				da <b>wppconnect</b>, que roda dentro do próprio contexto da página do WhatsApp.
+				estilização é feita com Tailwind CSS. A comunicação com o WhatsApp é feita interceptando a
+				própria comunicação websocket na plataforma web da Meta, utilizando bibliotecas que auxiliam
+				neste processo e que rodam dentro do próprio contexto da página do WhatsApp.
 			</p>
 			<p>
 				Os dados do usuário (scripts, agendamentos etc.) ficam salvos localmente no navegador usando{' '}
@@ -78,10 +79,11 @@ export function WhatsappExtension() {
 				<b>content script no mundo MAIN</b> (faz a automação real do WhatsApp).
 			</p>
 			<p>
-				No build da extensão utilizando <b>Webpack</b>, foi desenvolvido um plugin customizado que
-				percorre todos os arquivos e diretórios gerados pelo build renomeando cada um com strings
-				aleatórias e reescrevendo referências no manifest.json, técnica utilizada para ofuscação e
-				para dificultar engenharia reversa do código publicado na Chrome Web Store.
+				No build da extensão MV3 utilizando <b>Webpack</b>, além do código ser minificado também foi
+				desenvolvido um plugin customizado que percorre todos os arquivos e diretórios gerados pelo
+				build renomeando cada um com strings aleatórias e reescrevendo referências no manifest.json,
+				técnica utilizada para ofuscação e para dificultar engenharia reversa do código publicado na
+				Chrome Web Store.
 			</p>
 		</Container>
 	)
